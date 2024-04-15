@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4YB1KYWM07"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4YB1KYWM07');
+</script>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,700&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Whyte:wght@400;500&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Whyte Inktrap:wght@700&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Dela Gothic One:wght@400&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Caladea:wght@700&display=swap"
+  />
+  <link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;700&display=swap"
+/>
+    <script src="../static/script/bootstrap.js"></script>
+    <script src="../static/script/jquery-3.6.0.js"></script>
+   </head>
+  <body >
+  
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #292929">
+      <a class="navbar-brand" href="#">SoundFlow Therapy</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{{url_for('index')}}" style="color: white;">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('musictherapy')}}" style="color: white;">Music Therapy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('musictool')}}" style="color: white;">Music Recommender</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('aboutus')}}" style="color: white;">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdRBFrm0dpjhfHnRX_8gHHog_qeugY-FyxGH8cU9e9KPZCpoQ/viewform?usp=sf_link" target="_blank" style="color: white;">Survey Feedback</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  <style>
+    body {
+      margin: 0; 
+      font-family: 'Source Sans Pro';
+      background-color: #9e5a63;
+      color: white;
+    }
+    .container {
+      width:100%; /* Adjusted width to fit larger font */
+      max-width: 3800px;
+      padding: 250px;
+      background-image: url(../static/img/musictherapy.jpg);
+      background-size: cover;
+      background-position: center; /* Center background image */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+   }
+   .image-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-wrapper img {
+    width: 100%;
+    max-width: 1000px; /* Adjust maximum width as needed */
+}
+  .center-content {
+    text-align: center;
+  }
+
+    p {
+      line-height: 1.6;
+      color: white;
+      font-family: inherit;
+      font-size: 20px; 
+      margin-bottom: 40px; 
+      font-weight: 300; 
+    }
+    .container2 {
+      margin-top: 50px; 
+      margin-bottom: 50px; 
+      margin: 20px auto; 
+      width: 50%;
+      max-width: 3800px;
+      padding: 50px;
+      background-color: #644e5b;
+      border: 7.5px solid black;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      margin-top: 0;
+      color: white;
+      font-family: inherit;
+      font-size: 75 px;
+      font-weight: 600;
+  }
+
+  .parent-container {
+    margin: 50px auto; 
+    margin-top: 50px; 
+    display: flex;
+    font-family: 'Source Sans Pro';
+    justify-content: space-between; 
+    align-items: center;
+    width: 90%;
+    height: 900px; 
+    background-color: #273644 ; 
+  }
+  
+  .child-container {
+    flex: 1; 
+    height: 90%; 
+    width: 90%;
+    background-color: #314455;
+    padding: 0px;
+    margin: 0 50px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 10px; /* Adjust image position */
+
+  }
+  h2{
+    color: white;
+    font-family: inherit;
+    font-size: 45px; 
+    font-weight: 600px; 
+    font-weight: bold; 
+    cursor: pointer; /* Add cursor pointer */
+
+  }
+  h3{
+    color: white;
+    font-family: inherit;
+    font-size: 35px; 
+    font-weight: 600px; 
+    font-weight: bold; 
+    cursor: pointer; /* Add cursor pointer */
+
+  }
+  h3:hover, h2:hover {
+    text-decoration: underline; /* Underline text on hover */
+    cursor: pointer; /* Add cursor pointer */
+
+  }
+
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="center-content">
+      <p style="margin: 0">
+      <p style="margin: 0">
+
+      </div>
+</div>
+
+<div class="container2">
+  <div class="center-content">
+    <h1><strong>Explore the World of Music Therapy!</strong></h1>
+    </div>
+</div>
+<div class="parent-container">
+  <div class="child-container">
+    <h2 id="clickHereTo">Click here to Try it Out Yourself</h2>
+    <img src="../static/img/capstone spotify playlist.png" alt="Playlist">
+  </div>
+  <div class="child-container">
+    <h3 id="clickHereTo1">Click Here to Learn More about Music Therapy</h3>
+    <img src="../static/img/musicpills.png" alt="Music Pills">
+  </div>
+</div>
+
+<script>
+  var clickHereTo = document.getElementById("clickHereTo");
+  if (clickHereTo) {
+    clickHereTo.addEventListener("click", function (e) {
+      window.location.href = "{{url_for('musictool')}}"
+    });
+  }
+  var clickHereTo1 = document.getElementById("clickHereTo1");
+  if (clickHereTo1) {
+    clickHereTo1.addEventListener("click", function (e) {
+      window.location.href = "{{url_for('musictherapy')}}"
+    });
+  }
+  </script>
+</body>
+</html>

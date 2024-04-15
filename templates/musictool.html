@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4YB1KYWM07"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4YB1KYWM07');
+</script>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,700&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Whyte:wght@400;500&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Whyte Inktrap:wght@700&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Dela Gothic One:wght@400&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Caladea:wght@700&display=swap"
+  />
+  <link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;700&display=swap"
+/>
+    <script src="../static/script/bootstrap.js"></script>
+    <script src="../static/script/jquery-3.6.0.js"></script>
+   </head>
+  <body >
+  
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #292929">
+      <a class="navbar-brand" href="#">SoundFlow Therapy</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{{url_for('index')}}" style="color: white;">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('musictherapy')}}" style="color: white;">Music Therapy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('musictool')}}" style="color: white;">Music Recommender</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('aboutus')}}" style="color: white;">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdRBFrm0dpjhfHnRX_8gHHog_qeugY-FyxGH8cU9e9KPZCpoQ/viewform?usp=sf_link" target="_blank" style="color: white;">Survey Feedback</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+<style>
+  .container {
+      margin: auto;
+      width: 50%; 
+      max-width: 3800px;
+      padding: 20px;
+      background-color: #314455;
+      border-radius: 35px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      font-family: 'Source Sans Pro';
+  }
+
+  form {
+      text-align: center;
+      background-color: #314455;
+      padding: 40 px 20px;
+      margin: 50px 100px; /* Center the form horizontally and add some bottom margin */
+  
+    }
+
+  h2 {
+      margin-top: 0;
+      color: white;
+      font-family: inherit;
+      font-size: 50 px;
+      font-weight: 600;
+  }
+
+  h4 {
+    text-align: center;
+    margin-top: 125px; /* Increase margin-top to add more space */
+    margin-bottom: 50px; /* Increase margin-bottom to add more space */
+    color: white;
+    font-family: inherit;
+    font-size: 40px;
+    font-weight: 600;
+}
+  p {
+      margin: 20px 0;
+      color: white;
+      font-family: inherit;
+      font-size: 40 px;
+      font-weight: 300;
+    }
+
+  input[type="radio"] {
+      display: none;
+  }
+
+  label {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+      margin-below: 20px;
+  }
+
+  label:hover {
+      background-color: #368139;
+  }
+
+  input[type="radio"]:checked + label {
+      background-color: #225624;
+  }
+
+  button {
+      margin-top: 40px;
+      padding: 15px 40px;
+      font-size: 20 px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+  }
+
+  button:hover {
+      background-color: #368139;
+  }
+
+
+
+  .container2 {
+    margin-top: 50px; 
+    margin-bottom: 50px; 
+    margin: 20px auto; 
+    width: 85%;
+    max-width: 3800px;
+    padding: 20px;
+    background-color: #644e5b;
+    border: 7.5px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+  h1 {
+    text-align: center;
+    color: white;
+    font-family: inherit;
+    font-size: 30px; 
+    margin-bottom: 40px; 
+    font-weight: 300; 
+  }
+  h3 {
+    text-align: center;
+    line-height: 1.6;
+    color: white;
+    font-family: inherit;
+    font-size: 30px; 
+    margin-bottom: 40px; 
+    font-weight: 600; 
+  }
+
+  body {
+      margin: 0;
+      line-height: normal;
+      background-color: #9e5a63;
+  }
+</style>
+</style>
+</head>
+<body>
+  <div
+  style="
+    position: relative;
+    background-color: #9e5a63;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 74px 0px 114px;
+    box-sizing: border-box;
+    gap: 76.8px;
+    mix-blend-mode: linear-burn;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    font-size: 75px;
+    color: #fff;
+    font-family: 'Source Sans Pro';
+  "
+>
+  <footer
+    style="
+      width: 600px;
+      height: 355px;
+      position: relative;
+      display: none;
+      max-width: 100%;
+      z-index: 0;
+    "
+  ></footer>
+  <img
+    style="
+      width: 100%;
+      height: 300px;
+      position: absolute;
+      margin: 0 !important;
+      top: 0px;
+      right: 0px;
+      left: 0px;
+      max-width: 100%;
+      overflow: hidden;
+      flex-shrink: 0;
+      object-fit: cover;
+    "
+    alt=""
+    src="../static/img/musicrecommendations1.jpg"
+    />
+
+  <h2
+    style="
+      margin: 0;
+      width: 767px;
+      height: 175px;
+      position: relative;
+      font-size: inherit;
+      letter-spacing: -0.02em;
+      line-height: 120%;
+      font-weight: 700;
+      font-family: inherit;
+      display: inline-block;
+      flex-shrink: 0;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      max-width: 100%;
+      box-sizing: border-box;
+      padding-left: 20px;
+      z-index: 1;
+    "
+  >
+    <p style="margin: 0">Create Your own</p>
+    <p style="margin: 0">Music Playlist</p>
+  </h2>
+</div>
+
+  <h4> How it Works </h4>
+
+  <div class="container2">
+    <h3><strong><em>
+      *Disclaimer: You will need to sing into the SoundFlow Therapy Spotify account in order to use this recommender. 
+      After you finish filling out the form below, when you click on "Create Your Playlist!" you will need to login using these credentials: </em></strong></p></h3>
+      
+      <h3><strong><em>Email: soundflowtherapy@gmail.com </em></strong></p></h3>
+        <h3><strong><em>Password: 8!kcH2X2hA.b </em></strong></p></h3>
+          <h3><strong><em>After signing in, click "agree" and then you will be redirected to a page with a link to listen to your playlist.* </em></strong></p></h3>
+    
+
+    <h1>Fill out the set of questions above to get a personalized
+      Spotify playlist created in your Spotify account. There are two
+      different modes you can choose from: Normal and Random. The
+      normal mode will allow you to choose what type of mood your
+      playlist will based off with four unique moods available. The
+      random mode chooses a mood at random to base your playlist off on.
+     </h1>
+  </div>
+
+</div>
+
+<div class="container">
+  <form id="musicForm" action="processchoice" method="post">
+    <h2 style="color:white;">Music Mode Selection</h2>
+    <div>
+        
+
+            <p style="color:white;">What mode do you want your music in?</p>
+            <input type="radio" id="normal" name="mode" value="normal" required>
+            <label for="normal">Normal Mode</label><br>
+            <input type="radio" id="random" name="mode" value="random" required>
+            <label for="random">Random Mode</label><br>
+
+    </div>
+    <div id="moodQuestion" style="display: none;">
+
+            <p style="color:white;">What mood of music do you want?</p>
+            <input type="radio" id="happy" name="mood" value="happy"  >
+            <label for="happy">Happy</label><br>
+            <input type="radio" id="sad" name="mood" value="sad" >
+            <label for="sad">Sad</label><br>
+            <input type="radio" id="angry" name="mood" value="angry" >
+            <label for="angry">Angry</label><br>
+            <input type="radio" id="relaxed" name="mood" value="relaxed" >
+            <label for="relaxed">Relaxed</label><br>
+
+    </div>
+    <button type="submit">Create Your Playlist!</button>
+    </form>
+  </div>
+  
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var normalModeRadio = document.getElementById("normal");
+        var randomModeRadio = document.getElementById("random");
+        var moodQuestionDiv = document.getElementById("moodQuestion");
+        var moodRadios = document.querySelectorAll('input[name="mood"]');
+    
+        // Add event listener to both radio buttons
+        normalModeRadio.addEventListener("change", toggleMoodQuestion);
+        randomModeRadio.addEventListener("change", toggleMoodQuestion);
+    
+        function toggleMoodQuestion() {
+            // Show mood question if normal mode is selected
+            if (normalModeRadio.checked) {
+                moodQuestionDiv.style.display = "block";
+            } else {
+                moodQuestionDiv.style.display = "none";
+                // Reset mood selection if switching to random mode
+                moodRadios.forEach(function(radio) {
+                    radio.checked = false;
+                });
+            }
+        }
+    });    
+    document.addEventListener("DOMContentLoaded", function() {
+        // Reset form fields to default state on page load
+        document.getElementById("musicForm").reset();
+    });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4YB1KYWM07"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4YB1KYWM07');
+</script>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,700&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Whyte:wght@400;500&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Whyte Inktrap:wght@700&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Dela Gothic One:wght@400&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Caladea:wght@700&display=swap"
+  />
+  <link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;700&display=swap"
+/>
+    <script src="../static/script/bootstrap.js"></script>
+    <script src="../static/script/jquery-3.6.0.js"></script>
+   </head>
+  <body >
+  
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #292929">
+      <a class="navbar-brand" href="#">SoundFlow Therapy</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{{url_for('index')}}" style="color: white;">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('musictherapy')}}" style="color: white;">Music Therapy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('musictool')}}" style="color: white;">Music Recommender</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('aboutus')}}" style="color: white;">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdRBFrm0dpjhfHnRX_8gHHog_qeugY-FyxGH8cU9e9KPZCpoQ/viewform?usp=sf_link" target="_blank" style="color: white;">Survey Feedback</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+<style>
+  body {
+    margin: 0; 
+    font-family: 'Source Sans Pro';
+    background-color: #9e5a63;
+    color: white;
+  }
+  .container {
+    width:100%; /* Adjusted width to fit larger font */
+    max-width: 3800px;
+    padding: 20px;
+    background-color: black;
+    border: 10px solid black; /* Added border style */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+  h1 {
+    color: white;
+    font-family: inherit;
+    font-size: 70px; 
+    margin-bottom: 40px; 
+    font-weight: bold; 
+  }
+  p {
+    line-height: 1.6;
+    color: white;
+    font-family: inherit;
+    font-size: 20px; 
+    margin-bottom: 40px; 
+    font-weight: 300; 
+  }
+  .image-wrapper {
+    text-align: center; /* Center the image horizontally */
+    margin-top: 20px; /* Add space between container and image */
+  }
+  .articletext {
+    margin-left: 25px; /* Move the article content to the right by 25px */
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  #makebold{
+    font-weight: 600;
+    font-size: 30px; 
+
+  }
+  .container2 {
+    width:65%; /* Adjusted width to fit larger font */
+    max-width: 3800px;
+    padding: 20px;
+    font-family: inherit;
+    background-color: #314455;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+    margin: 0 auto;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    cursor: pointer; /* Add cursor pointer */
+
+}
+.container2:hover {
+  background-color: #273644;
+}
+h3 {
+  color: white;
+  text-align: center; 
+  font-family: inherit;
+  font-size: 50px; 
+  font-weight: 600; 
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1><strong>Music Therapy and Its Benefits</strong></h1>
+  <h2>
+    By: Vibhav Thiru
+  </h2>
+
+</div>
+<div class="image-wrapper">
+  <img src="../static/img/articlecoverpurple.jpg" alt="Article cover">
+</div>
+
+<div class = "articletext">
+<p id = "makebold">Introduction</p>
+<p style="margin: 0">&nbsp;</p>
+<p style="margin: 0">
+  Mental health challenges remain a prevalent issue today in the
+  United States as about one in five adults suffer from a
+  diagnosable mental illness in a given year. These issues can
+  affect people from all walks of life, cutting across age, gender,
+  and socioeconomic boundaries. The fast-paced, modern lifestyle,
+  coupled with external stressors and societal pressures, has
+  contributed to the rise of mental health challenges. Traditional
+  therapeutic approaches, while valuable, may not fully address the
+  diverse needs of individuals navigating the complex terrain of
+  mental health disorders. In response to this growing demand for
+  holistic interventions, music therapy has emerged as a dynamic and
+  inclusive modality. Although music has been a universal form of
+  expression and therapy for centuries and is not a breakthrough in
+  therapy, it has gained recognition in recent years as a structured
+  and evidence-based form of treatment for individuals who may face
+  mental health challenges. With the use of technology, music
+  therapy can act as a powerful and effective form of therapy that
+  has psychological and social benefits to its patients.
+</p>
+<p style="margin: 0">&nbsp;</p>
+<p style="margin: 0">&nbsp;</p>
+<p style="margin: 0">
+  <p id = "makebold">Background</p>
+</p>
+<p style="margin: 0">&nbsp;</p>
+<p style="margin: 0">
+  Music therapy is an adaptable and therapeutic approach that uses
+  music to address various physical, emotional, and cognitive needs.
+  It is particularly effective in addressing anxiety, depression,
+  and post-traumatic stress disorder, offering a safe and
+  non-invasive means of expression, communication, and healing.
+  Music is used as a form of expression for patients that can
+  improve overall well-being and quality of life. This therapy can
+  be used in a wide range of demographics, from toddlers to the
+  elderly, but it is tailored to fit each person’s unique
+  situation(CloudCover Media, 2016). The flexibility of music
+  therapy also allows it to be used in diverse treatment settings,
+  such as hospitals, schools, rehabilitation centers, and private
+  practices. It also aligns with the growing recognition of holistic
+  and complementary approaches in mental health care in the U.S. The
+  positive
+</p>
+<p style="margin: 0">
+  impact of music therapy on mental health is currently being
+  recorded in ongoing research by professional associations like the
+  American Music Therapy Association.
+</p>
+<p style="margin: 0">
+  <b>&nbsp;</b>
+</p>
+<p style="margin: 0">
+  <b>&nbsp;</b>
+</p>
+<p style="margin: 0">
+  <p id = "makebold">Neurological Effects</p>
+</p>
+<p style="margin: 0">&nbsp;</p>
+<p style="margin: 0">
+  Through its neurological effects and role in stress reduction,
+  music therapy can be seen as providing psychological benefits that
+  can have a profound impact on a person’s mental and emotional
+  health. From a young age, human brains can identify and process
+  music. It acts as a form of sensory stimuli that can activate more
+  parts of the brain than other sensory stimulants and offer deep
+  brain stimulation(Xu, 2023). The different areas of the brain
+  responsible for processing emotions, memories, and language are
+  stimulated by music. When music is registered by the brain, it
+  triggers "pleasure neurotransmitters”, such as dopamine, that make
+  you feel happy. Our ears pick up the vibrations of music sounds as
+  they travel. The inner ear then produces electrical signals from
+  these vibrations. Following that, neurons send these signals to
+  particular regions of the brain’s cerebral cortex. The various
+  components of the signals (like the pitch, rhythm, and tone) are
+  then detected by specific brain regions(BetterSleep, 2022). Its
+  ability to stimulate multiple areas of the brain allows it to act
+  as a great tool for various psychological conditions, including
+  disorders of consciousness.
+</p>
+<p style="margin: 0">&nbsp;</p>
+<p style="margin: 0">&nbsp;</p>
+<p style="margin: 0">
+  <p id = "makebold">Brain Disorders</p>
+</p>
+<p style="margin: 0">&nbsp;</p>
+<p style="margin: 0">
+  Neurologic Music Therapy(NMT) is a specific branch of music
+  therapy that aids brain disorders and many other problems
+  associated with the brain such as traumatic brain injury, stroke,
+  autism, Alzheimer’s, and Parkinson’s. Studies of people with
+  memory disorders, such as Alzheimer’s disease, suggest that
+  neuronal memory traces built through music are deeply ingrained
+  and more resilient to neurodegenerative influences(Stack, 2014).
+  Additionally, rhythmic auditory stimulation provided by music can
+  help individuals with Alzheimer's improve motor skills and
+  coordination. The multi-sensory nature of music engages various
+  parts of the brain, compensating for cognitive decline and
+  promoting a sense of joy and connection. 
+</p>
+<p style="margin: 0">&nbsp;</p>
+<p style="margin: 0">&nbsp;</p>
+<p style="margin: 0">
+  <p id = "makebold">Stress Reduction</p>
+</p>
+<p style="margin: 0">&nbsp;</p>
+<p style="margin: 0">
+  Alongside its neurological effects, music therapy plays a major
+  role in reducing stress and inducing relaxation. The tempo of a
+  song can influence the pulse of neural signals in the brain, and
+  these changes can directly affect how fast the heart beats and how
+  fast we breathe(Moawad, 2021). Slow-tempo music, around 60 beats
+  per minute, can make the brain synchronize with the beat, causing
+  the same alpha brain waves that are present when we are relaxed
+  and conscious(Moawad, 2021).  Music can influence the mood of
+  children and can be used to reduce stress and improve the sense of
+  well-being in the following ways: Distraction, Mindfulness, and
+  Creative Expression. Music demands their attention, it acts as a
+  distraction while also helping them explore their emotions. It
+  also keeps them focused and prevents their mind from wandering to
+  negative thoughts or worries.
+</p>
+<p style="margin: 0"> </p>
+<p style="margin: 0">
+  Music can also activate the body’s natural relaxation response,
+  leading to the relaxation of tense muscles that loosen your body
+  and autonomically relax your mind as well. Another benefit of
+  listening to music for stress management is increased physical
+  relaxation and improved cardiovascular health. Studies have shown
+  that listening to soothing music can decrease blood pressure,
+  heart rate, and anxiety levels(Bugos, 2023). This can lead to a
+  state of physical relaxation and improved overall cardiovascular
+  health. Additionally, music has been found to reduce the release
+  of stress hormones like cortisol, decreasing stress and tension in
+  the body. Also, research has shown that listening to relaxing
+  music before bed can help induce a state of relaxation and reduce
+  racing thoughts, leading to a more restful night’s sleep. In
+  addition, music can also serve as a form of white noise, blocking
+  out disruptive sounds and promoting better sleep. By reducing
+  feelings of stress and anxiety, individuals are able to approach
+  tasks with a clearer and more positive mindset, resulting in
+  greater productivity.
+</p>
+<p style="margin: 0">&nbsp;</p>
+<p style="margin: 0">&nbsp;</p>
+<p style="margin: 0">
+  <p id = "makebold">Social Benefits </p>
+</p>
+<p style="margin: 0">&nbsp;</p>
+<p style="margin: 0">
+  Outside of psychological benefits, this form of therapy can also
+  be used to positively impact social well-being by acting as a
+  conduit of emotional expression, fostering improved communications
+  and social connections. In therapeutic settings, individuals from
+  diverse backgrounds come together, engaging in music-related
+  activities that transcend cultural, social, and personal
+  differences. The shared experience of creating music enhances a
+  feeling of unity, breaking down barriers that may exist in
+  traditional communication(Suttie, 2015). The collaborative nature
+  of music therapy sessions promotes mutual understanding,
+  acceptance, and a shared sense of purpose within the group.
+</p>
+<p style="margin: 0">&nbsp;</p>
+<p style="margin: 0">
+  The non-verbal nature of musical expression enables participants
+  to communicate complex emotions that may be challenging to express
+  verbally. This aspect of the therapy is particularly beneficial
+  for individuals who struggle with conventional communication
+  methods or find it difficult to articulate their emotions. Whether
+  through playing instruments, singing, or engaging in other musical
+  activities, individuals can find a medium to convey their
+  innermost thoughts and feelings, leading to enriched communication
+  with others(Rumsey, 2023). This emotional release contributes to a
+  cathartic experience, promoting mental well-being and allowing
+  participants to explore and process their emotions in a supportive
+  space. These therapy sessions can help people practice social
+  skills that they can apply in their real lives(Jb Music Therapy,
+  2017). The sessions are usually in a group environment, which
+  leads to a better sense of community. By engaging in music-related
+  activities together, individuals from diverse backgrounds can find
+  common ground, breaking down barriers and building connections
+  through emotional expression. They can form a strong sense of
+  unity, acceptance, and mutual understanding within the therapeutic
+  setting.
+</p>
+<p style="margin: 0">&nbsp;</p>
+<p style="margin: 0">
+  <b>&nbsp;</b>
+</p>
+<p style="margin: 0">
+  <p id = "makebold">Conclusion</p>
+</p>
+<p style="margin: 0">
+  <b>&nbsp;</b>
+</p>
+<p style="margin: 0">
+  In conclusion, the landscape of mental health care is evolving,
+  and music therapy has positioned itself as a dynamic and
+  evidence-backed intervention to address the prevalent challenges
+  faced by individuals in the United States. With its inherent
+  adaptability, neurological benefits, and stress-reducing
+  properties, music therapy presents a holistic and promising avenue
+  for promoting overall well-being. The specialized field of
+  Neurologic Music Therapy (NMT) demonstrates encouraging outcomes,
+  particularly in addressing brain-related disorders such as
+  Alzheimer's and Parkinson's. Beyond individual healing, the social
+  dimensions of music therapy, fostering communication and community
+  in therapeutic settings, underscore its potential for building
+  meaningful connections among diverse groups. As society embraces a
+  more comprehensive approach to mental health, music therapy, with
+  its universal language and technological accessibility, emerges as
+  a valuable and impactful tool in promoting healing and
+  self-discovery.
+</p>
+</div>
+<a style="color: white;"href="https://docs.google.com/document/d/e/2PACX-1vQ4f7RyY_TxpQvPbvkn4ZBx5ZnORnVHchxxe4-X9yJgFPvgHAMAFu_AaSiHujBinuArri4bE70FDCBK/pub" target="_blank">
+<div class="container2">
+  <h3>Citations</h3>
+</div>
+</a>
+</body> 
+</html>
+
